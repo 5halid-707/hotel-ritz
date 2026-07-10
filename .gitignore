@@ -1,5 +1,6 @@
 node_modules/
 .next/
+public/images/
 .env.local
 .env*.local
 *.log
