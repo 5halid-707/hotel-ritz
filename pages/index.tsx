@@ -37,7 +37,7 @@ export default function Home() {
         <main>
           {/* Hero */}
           <section className="relative h-screen flex items-center justify-center overflow-hidden bg-dark">
-            <div ref={parallaxRef} className="absolute inset-0 bg-cover bg-center parallax-bg" style={{ backgroundImage: "url('https://cache.marriott.com/is/image/marriotts7prod/jedrj-entrance-0016:Pano-Hor?wid=1600&fit=constrain')" }}>
+            <div ref={parallaxRef} className="absolute inset-0 bg-cover bg-center parallax-bg" style={{ backgroundImage: "url('/api/marriott/jedrj-entrance-0016:Pano-Hor?wid=1600&fit=constrain')" }}>
               <div className="absolute inset-0 bg-gradient-to-l from-dark/70 via-dark/50 to-dark/80"></div>
             </div>
             <div className="relative z-10 text-center px-6 fade-in">
@@ -76,7 +76,7 @@ export default function Home() {
                 </Reveal>
                 <Reveal type="fade-right">
                   <div className="relative img-reveal">
-                    <img src="https://cache.marriott.com/is/image/marriotts7prod/jedrj-entrance-0016:Pano-Hor?wid=800&fit=constrain" alt="ريتز كارلتون جدة" className="w-full object-cover" />
+                    <img src="/api/marriott/jedrj-entrance-0016:Pano-Hor?wid=800&fit=constrain" alt="ريتز كارلتون جدة" className="w-full object-cover" />
                   </div>
                 </Reveal>
               </div>
@@ -176,10 +176,10 @@ export default function Home() {
               </Reveal>
               <Reveal type="stagger" className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {[
-                  { name: 'مطعم ريحانة', desc: 'مأكولات إقليمية طوال اليوم', img: 'https://cache.marriott.com/is/image/marriotts7prod/rz-jedrj-al-ezz-2-31338:Classic-Hor?wid=400&fit=constrain' },
-                  { name: 'صالة كراميل', desc: 'شاي بعد الظهيرة ومعجنات', img: 'https://cache.marriott.com/is/image/marriotts7prod/jedrj-jeddah-spa-50771598?wid=400&fit=constrain' },
-                  { name: 'سوق المأكولات البحرية', desc: 'ليلة جمعة مع أطباق بحرية', img: 'https://cache.marriott.com/is/image/marriotts7prod/50500491-jedrj_2018_0231:Classic-Hor?wid=400&fit=constrain' },
-                  { name: 'تناول الطعام في الغرفة', desc: 'خدمة غرف على مدار الساعة', img: 'https://cache.marriott.com/is/image/marriotts7prod/rz-jedrj-2018-0231:Classic-Hor?wid=400&fit=constrain' },
+                  { name: 'مطعم ريحانة', desc: 'مأكولات إقليمية طوال اليوم', img: '/api/marriott/rz-jedrj-al-ezz-2-31338:Classic-Hor?wid=400&fit=constrain' },
+                  { name: 'صالة كراميل', desc: 'شاي بعد الظهيرة ومعجنات', img: '/api/marriott/50500489-jedrj_2018_0172:Classic-Hor?wid=400&fit=constrain' },
+                  { name: 'سوق المأكولات البحرية', desc: 'ليلة جمعة مع أطباق بحرية', img: '/api/marriott/rz-jedrj-flame-table-12781:Classic-Hor?wid=400&fit=constrain' },
+                  { name: 'تناول الطعام في الغرفة', desc: 'خدمة غرف على مدار الساعة', img: '/api/marriott/rz-jedrj-deluxe-room-18354-16543:Classic-Hor?wid=400&fit=constrain' },
                 ].map((d) => (
                   <Link key={d.name} href="/dining" className="group overflow-hidden">
                     <div className="aspect-[4/3] overflow-hidden">
@@ -294,10 +294,10 @@ export default function Home() {
               </Reveal>
               <Reveal type="stagger" className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[
-                  'https://cache.marriott.com/is/image/marriotts7prod/jedrj-entrance-0016:Pano-Hor?wid=400&fit=constrain',
-                  'https://cache.marriott.com/is/image/marriotts7prod/rz-jedrj-2018-0231:Classic-Hor?wid=400&fit=constrain',
-                  'https://cache.marriott.com/is/image/marriotts7prod/rz-jedrj-al-ezz-2-31338:Classic-Hor?wid=400&fit=constrain',
-                  'https://cache.marriott.com/is/image/marriotts7prod/50500489-jedrj_2018_0172:Classic-Hor?wid=400&fit=constrain',
+                  '/api/marriott/jedrj-entrance-0016:Pano-Hor?wid=400&fit=constrain',
+                  '/api/marriott/rz-jedrj-2018-0231:Classic-Hor?wid=400&fit=constrain',
+                  '/api/marriott/rz-jedrj-al-ezz-2-31338:Classic-Hor?wid=400&fit=constrain',
+                  '/api/marriott/50500489-jedrj_2018_0172:Classic-Hor?wid=400&fit=constrain',
                 ].map((src, i) => (
                   <Link key={i} href="/gallery" className="overflow-hidden group">
                     <div className="aspect-[4/3] overflow-hidden">

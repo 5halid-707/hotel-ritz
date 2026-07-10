@@ -31,7 +31,7 @@ export default function EventsPage() {
 
             <Reveal type="slide-section" className="grid md:grid-cols-2 gap-12 mb-16">
               <Reveal type="fade-left">
-                <img src="https://cache.marriott.com/is/image/marriotts7prod/rz-jedrj-ballroom-1-42126:Feature-Hor?wid=700&fit=constrain" alt="قاعة الاحتفالات" className="w-full object-cover aspect-[4/3]" />
+                <img src="/api/marriott/rz-jedrj-ballroom-1-42126:Feature-Hor?wid=700&fit=constrain" alt="قاعة الاحتفالات" className="w-full object-cover aspect-[4/3]" />
               </Reveal>
               <Reveal type="fade-right">
                 <div className="flex flex-col justify-center">

@@ -33,7 +33,7 @@ export default function ExperiencesPage() {
                 </div>
               </Reveal>
               <Reveal type="fade-right">
-                <img src="https://cache.marriott.com/is/image/marriotts7prod/50500489-jedrj_2018_0172:Classic-Hor?wid=700&fit=constrain" alt="إطلالة على البحر" className="w-full object-cover aspect-[4/3]" />
+                <img src="/api/marriott/50500489-jedrj_2018_0172:Classic-Hor?wid=700&fit=constrain" alt="إطلالة على البحر" className="w-full object-cover aspect-[4/3]" />
               </Reveal>
             </Reveal>
 

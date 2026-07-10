@@ -32,7 +32,7 @@ export default function SpaPage() {
 
             <Reveal type="slide-section" className="grid md:grid-cols-2 gap-12 mb-16">
               <Reveal type="fade-left">
-                <img src="https://cache.marriott.com/is/image/marriotts7prod/jedrj-jeddah-spa-50771598?wid=700&fit=constrain" alt="النادي الصحي" className="w-full object-cover" />
+                <img src="/api/marriott/jedrj-jeddah-spa-50771598?wid=700&fit=constrain" alt="النادي الصحي" className="w-full object-cover" />
               </Reveal>
               <Reveal type="fade-right">
                 <div className="flex flex-col justify-center">
