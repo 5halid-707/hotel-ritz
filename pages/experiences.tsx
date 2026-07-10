@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Reveal from '../components/Reveal'
 import { attractions, hotelInfo } from '../lib/data'
 import Link from 'next/link'
 
@@ -22,21 +23,23 @@ export default function ExperiencesPage() {
               <p className="text-luxury/60 font-light max-w-2xl mx-auto font-arabic">اكتشف أفضل ما تقدمه وجهتنا - من سحر البلد التاريخي إلى المعالم العصرية</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 mb-16">
-              <div className="flex flex-col justify-center">
-                <h2 className="font-arabicSerif text-3xl text-dark mb-6">الرفاهية على طول البحر الأحمر</h2>
-                <p className="text-luxury/60 font-light leading-relaxed font-arabic">
-                  يطل فندق ريتز كارلتون جدة على البحر الأحمر، ويجمع بين الأناقة الفخمة وإمكانية الوصول إلى التجارب الأكثر شهرة في المدينة، من سحر "البلد" التاريخي إلى عالم تيم لاب بوردليس جدة الغامر. ينعم النزلاء بأجواء الراحة في الغرف والأجنحة الفسيحة المطلة على البحر.
-                </p>
-              </div>
-              <div>
-                <img src="https://images.pexels.com/photos/2034337/pexels-photo-2034337.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&fit=crop" alt="إطلالة على البحر" className="w-full object-cover aspect-[4/3]" />
-              </div>
-            </div>
+            <Reveal type="slide-section" className="grid md:grid-cols-2 gap-12 mb-16">
+              <Reveal type="fade-left">
+                <div className="flex flex-col justify-center">
+                  <h2 className="font-arabicSerif text-3xl text-dark mb-6">الرفاهية على طول البحر الأحمر</h2>
+                  <p className="text-luxury/60 font-light leading-relaxed font-arabic">
+                    يطل فندق ريتز كارلتون جدة على البحر الأحمر، ويجمع بين الأناقة الفخمة وإمكانية الوصول إلى التجارب الأكثر شهرة في المدينة، من سحر "البلد" التاريخي إلى عالم تيم لاب بوردليس جدة الغامر. ينعم النزلاء بأجواء الراحة في الغرف والأجنحة الفسيحة المطلة على البحر.
+                  </p>
+                </div>
+              </Reveal>
+              <Reveal type="fade-right">
+                <img src="https://cache.marriott.com/is/image/marriotts7prod/50500489-jedrj_2018_0172:Classic-Hor?wid=700&fit=constrain" alt="إطلالة على البحر" className="w-full object-cover aspect-[4/3]" />
+              </Reveal>
+            </Reveal>
 
-            <div className="mb-16">
+            <Reveal type="slide-section" className="mb-16">
               <h2 className="font-arabicSerif text-3xl text-dark mb-8 text-center">ماذا يوجد بالقرب من هنا؟</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Reveal type="stagger" className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {attractions.map((a) => (
                   <div key={a.nameAr} className="bg-white hover-lift">
                     <div className="overflow-hidden aspect-[4/3]">
@@ -49,16 +52,16 @@ export default function ExperiencesPage() {
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
+              </Reveal>
+            </Reveal>
 
-            <div className="bg-dark p-12 text-center">
+            <Reveal type="fade-up" className="bg-dark p-12 text-center">
               <h2 className="font-arabicSerif text-3xl text-cream mb-4">دع فريقنا يخطط لرحلتك</h2>
               <p className="text-cream/50 font-light mb-8 font-arabic">فريق الكونسيرج لدينا جاهز لمساعدتك في تنظيم جميع أنشطتك</p>
               <Link href="/contact" className="inline-block border-2 border-gold text-gold px-10 py-4 text-sm tracking-wider hover:bg-gold hover:text-dark transition-all duration-300 font-arabic">
                 تواصل مع فريق الكونسيرج
               </Link>
-            </div>
+            </Reveal>
           </div>
         </main>
         <Footer />

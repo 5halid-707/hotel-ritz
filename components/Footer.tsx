@@ -50,8 +50,8 @@ export default function Footer() {
             <h5 className="text-gold text-sm tracking-wider mb-6 font-medium font-arabic">اتصل بنا</h5>
             <div className="space-y-3 text-sm text-cream/50 font-light">
               <p className="font-arabic">طريق الكورنيش، جدة</p>
-              <p dir="ltr">+966 12-2314444</p>
-              <p className="english-text">info@ritzcarlton-jeddah.com</p>
+              <p dir="ltr">05750515019</p>
+              <p className="english-text">grouthhacker@gmail.com</p>
             </div>
             <div className="mt-6">
               <h5 className="text-gold text-sm tracking-wider mb-4 font-medium font-arabic">النشرة البريدية</h5>

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Reveal from '../components/Reveal'
 import Link from 'next/link'
 
 export default function SpaPage() {
@@ -29,26 +30,28 @@ export default function SpaPage() {
               <p className="text-luxury/60 font-light max-w-2xl mx-auto font-arabic">مرفق سبا فاخر للرجال مع حوض استحمام وساونا وغرفة بخار وعلاجات فريدة ومجددة للنشاط</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 mb-16">
-              <div>
-                <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&fit=crop" alt="النادي الصحي" className="w-full object-cover" />
-              </div>
-              <div className="flex flex-col justify-center">
-                <h2 className="font-arabicSerif text-3xl text-dark mb-6">سبا ريتز كارلتون</h2>
-                <p className="text-luxury/60 font-light leading-relaxed mb-6 font-arabic">
-                  يضم الفندق ثلاث غرف علاجية في نادي صحي للرجال تقدم علاجات فريدة ومجددة للنشاط. استمتع بتجربة سبا لا تُنسى مع أحدث تقنيات العناية بالجسم والبشرة.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  {['ساونا', 'غرفة بخار', 'حوض استحمام', 'غرف علاجية'].map((f) => (
-                    <div key={f} className="bg-white p-4 text-center">
-                      <p className="text-dark font-arabic">{f}</p>
-                    </div>
-                  ))}
+            <Reveal type="slide-section" className="grid md:grid-cols-2 gap-12 mb-16">
+              <Reveal type="fade-left">
+                <img src="https://cache.marriott.com/is/image/marriotts7prod/jedrj-jeddah-spa-50771598?wid=700&fit=constrain" alt="النادي الصحي" className="w-full object-cover" />
+              </Reveal>
+              <Reveal type="fade-right">
+                <div className="flex flex-col justify-center">
+                  <h2 className="font-arabicSerif text-3xl text-dark mb-6">سبا ريتز كارلتون</h2>
+                  <p className="text-luxury/60 font-light leading-relaxed mb-6 font-arabic">
+                    يضم الفندق ثلاث غرف علاجية في نادي صحي للرجال تقدم علاجات فريدة ومجددة للنشاط. استمتع بتجربة سبا لا تُنسى مع أحدث تقنيات العناية بالجسم والبشرة.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    {['ساونا', 'غرفة بخار', 'حوض استحمام', 'غرف علاجية'].map((f) => (
+                      <div key={f} className="bg-white p-4 text-center">
+                        <p className="text-dark font-arabic">{f}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </div>
+              </Reveal>
+            </Reveal>
 
-            <div className="bg-white p-8 luxury-shadow mb-16">
+            <Reveal type="slide-section" className="bg-white p-8 luxury-shadow mb-16">
               <h2 className="font-arabicSerif text-2xl text-dark mb-6 text-center">قائمة العلاجات</h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-right">
@@ -70,15 +73,15 @@ export default function SpaPage() {
                   </tbody>
                 </table>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="text-center bg-dark p-12">
+            <Reveal type="fade-up" className="text-center bg-dark p-12">
               <h2 className="font-arabicSerif text-3xl text-cream mb-4">احجز جلسة سبا</h2>
               <p className="text-cream/50 font-light mb-8 font-arabic">لحجز موعد أو للاستفسار، يرجى الاتصال بنا</p>
               <Link href="/contact" className="inline-block border-2 border-gold text-gold px-10 py-4 text-sm tracking-wider hover:bg-gold hover:text-dark transition-all duration-300 font-arabic">
                 تواصل معنا
               </Link>
-            </div>
+            </Reveal>
           </div>
         </main>
         <Footer />

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Reveal from '../components/Reveal'
 import Link from 'next/link'
 
 export default function EventsPage() {
@@ -25,22 +26,24 @@ export default function EventsPage() {
               <p className="text-gold text-sm tracking-wider mb-4 font-light font-arabic">فعاليات لا تُنسى</p>
               <h1 className="font-arabicSerif text-5xl text-dark mb-4">الاجتماعات والفعاليات</h1>
               <div className="w-16 h-[2px] bg-gold mx-auto mb-6"></div>
-              <p className="text-luxury/60 font-light max-w-2xl mx-auto font-arabic">استضف اجتماعاتك ومناسباتك في أحد أرقى العناوين في جدة على البحر الأحمر</p>
+              <p className="text-luxury/60 font-light max-w-2xl mx-auto font-arabic">استضف اجتماعاتك ومناسبتك في أحد أرقى العناوين في جدة على البحر الأحمر</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 mb-16">
-              <div>
-                <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&fit=crop" alt="قاعة الاحتفالات" className="w-full object-cover aspect-[4/3]" />
-              </div>
-              <div className="flex flex-col justify-center">
-                <h2 className="font-arabicSerif text-3xl text-dark mb-6">مساحات اجتماعات استثنائية</h2>
-                <p className="text-luxury/60 font-light leading-relaxed font-arabic">
-                  يمكنك استضافة الاجتماعات والمؤتمرات والاحتفالات الاستثنائية في أحد أرقى العناوين في جدة. يتميز الفندق بقاعات احتفالات أنيقة ومساحات اجتماعات متعددة الاستخدامات وأكبر مرافق المؤتمرات في المدينة، حيث يقدم خدمة سلسة وتجارب راقية مصممة خصيصاً لكل مناسبة.
-                </p>
-              </div>
-            </div>
+            <Reveal type="slide-section" className="grid md:grid-cols-2 gap-12 mb-16">
+              <Reveal type="fade-left">
+                <img src="https://cache.marriott.com/is/image/marriotts7prod/rz-jedrj-ballroom-1-42126:Feature-Hor?wid=700&fit=constrain" alt="قاعة الاحتفالات" className="w-full object-cover aspect-[4/3]" />
+              </Reveal>
+              <Reveal type="fade-right">
+                <div className="flex flex-col justify-center">
+                  <h2 className="font-arabicSerif text-3xl text-dark mb-6">مساحات اجتماعات استثنائية</h2>
+                  <p className="text-luxury/60 font-light leading-relaxed font-arabic">
+                    يمكنك استضافة الاجتماعات والمؤتمرات والاحتفالات الاستثنائية في أحد أرقى العناوين في جدة. يتميز الفندق بقاعات احتفالات أنيقة ومساحات اجتماعات متعددة الاستخدامات وأكبر مرافق المؤتمرات في المدينة، حيث يقدم خدمة سلسة وتجارب راقية مصممة خصيصاً لكل مناسبة.
+                  </p>
+                </div>
+              </Reveal>
+            </Reveal>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <Reveal type="stagger" className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               {venues.map((venue) => (
                 <div key={venue.name} className="bg-white p-6 luxury-shadow">
                   <h3 className="font-arabicSerif text-xl text-dark mb-3">{venue.name}</h3>
@@ -52,9 +55,9 @@ export default function EventsPage() {
                   <p className="text-luxury/60 text-sm font-light font-arabic">{venue.desc}</p>
                 </div>
               ))}
-            </div>
+            </Reveal>
 
-            <div className="bg-white p-8 luxury-shadow mb-16">
+            <Reveal type="slide-section" className="bg-white p-8 luxury-shadow mb-16">
               <h2 className="font-arabicSerif text-2xl text-dark mb-6">حفلات الزفاف</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
@@ -68,9 +71,9 @@ export default function EventsPage() {
                   <p className="text-cream/40 text-xs font-light font-arabic">تُطبق الشروط والأحكام</p>
                 </div>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="bg-white p-8 luxury-shadow mb-16">
+            <Reveal type="slide-section" className="bg-white p-8 luxury-shadow mb-16">
               <h2 className="font-arabicSerif text-2xl text-dark mb-6">خدمات تقديم الطعام خارج الفندق</h2>
               <p className="text-luxury/60 font-light leading-relaxed mb-6 font-arabic">
                 انقل كرم الضيافة الشهير وفنون الطهي الاستثنائية لريتز كارلتون جدة إلى وجهتك المفضلة. بدءاً من الاحتفالات الخاصة وفعاليات الشركات إلى اللقاءات الاجتماعية الكبرى.
@@ -82,15 +85,15 @@ export default function EventsPage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </Reveal>
 
-            <div className="bg-dark p-12 text-center">
+            <Reveal type="fade-up" className="bg-dark p-12 text-center">
               <h2 className="font-arabicSerif text-3xl text-cream mb-4">خطط لفعاليتك القادمة</h2>
               <p className="text-cream/50 font-light mb-8 font-arabic">تواصل مع فريق التخطيط لدينا للبدء في تنظيم فعاليتك</p>
               <Link href="/contact" className="inline-block border-2 border-gold text-gold px-10 py-4 text-sm tracking-wider hover:bg-gold hover:text-dark transition-all duration-300 font-arabic">
                 تواصل معنا
               </Link>
-            </div>
+            </Reveal>
           </div>
         </main>
         <Footer />
