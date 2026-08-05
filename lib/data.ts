@@ -338,7 +338,7 @@ export const hotelInfo = {
   addressEn: 'Al Hamra District, South Corniche, PO Box 13344, Jeddah, Saudi Arabia, 21493',
   phone: '05750515019',
   fax: '',
-  email: 'grouthhacker@gmail.com',
+  email: 'khalid-alharbi@zohomail.sa',
   checkIn: '3:00 ظهراً',
   checkOut: '12:00 مساءً',
   minAge: 18,

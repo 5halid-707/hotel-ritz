@@ -50,7 +50,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-gold font-arabic text-sm mb-1">البريد الإلكتروني</h3>
-                      <p className="text-luxury/70" dir="ltr">info@ritzcarlton-jeddah.com</p>
+                      <p className="text-luxury/70" dir="ltr">khalid-alharbi@zohomail.sa</p>
                     </div>
                     <div>
                       <h3 className="text-gold font-arabic text-sm mb-1">ساعات العمل</h3>
